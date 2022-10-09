@@ -15,81 +15,155 @@
 
 //Array
 //push,unshift,pop,shift
-var arr=["HTML","CSS","JS","ReactJS"];
-console.log(arr);
-arr.push("NodeJS");//push---Adds a element to the last.
-console.log(arr);
-arr.unshift("FullStack");//unshift---Adds a element in the 0th Index.
-console.log(arr);
-arr.pop();//pop---Removes the last element.
-console.log(arr);
-arr.shift(); //shift---Removes the first element.
-console.log(arr);
+// var arr=["HTML","CSS","JS","ReactJS"];
+// console.log(arr);
+// arr.push("NodeJS");//push---Adds a element to the last.
+// console.log(arr);
+// arr.unshift("FullStack");//unshift---Adds a element in the 0th Index.
+// console.log(arr);
+// arr.pop();//pop---Removes the last element.
+// console.log(arr);
+// arr.shift(); //shift---Removes the first element.
+// console.log(arr);
 
 
-//slice and Splice
-console.log(""); //for empty line in console
-var a=["Anirudha","1234567890","anirudhabs@gmail.com","mysore","Bangalore"];
-console.log(a);
+// //slice and Splice
+// console.log(""); //for empty line in console
+// var a=["Anirudha","1234567890","anirudhabs@gmail.com","mysore","Bangalore"];
+// console.log(a);
 
-//splice
-a.splice(2,0,"E-Id","Adhaar"); //Splice--- it Add or removes element.
-console.log(a);
-a.splice(0,2)
-console.log(a);
-a.splice(2,3)
-console.log(a);
-//slice
-var a=["Anirudha","1234567890","anirudhabs@gmail.com","mysore","Bangalore"];
-console.log(a);
-var b=a.slice(1,3);//Slice---returns selected elements in an array, as a new array. selects from a given start, up to a (not inclusive) given end.
-console.log(b);
+// //splice
+// a.splice(2,0,"E-Id","Adhaar"); //Splice--- it Add or removes element.
+// console.log(a);
+// a.splice(0,2)
+// console.log(a);
+// a.splice(2,3)
+// console.log(a);
+// //slice
+// var a=["Anirudha","1234567890","anirudhabs@gmail.com","mysore","Bangalore"];
+// console.log(a);
+// var b=a.slice(1,3);//Slice---returns selected elements in an array, as a new array. selects from a given start, up to a (not inclusive) given end.
+// console.log(b);
 
-//Object and nesting on objects
-var employee={
-    Name="Anirudha B S" ;
-    Gender= "Male"
-    ID=123456;
-    Dept="I T" ;
+// //Object and nesting on objects
+// var employee={
+//     Name:"Anirudha B S",
+//     Gender:"Male",
+//     ID:123456,
+//     Dept:"I T",
 
-}
-console.log(employee);
-console.log(employee.ID);
-console.log(employee.Name);
+// }
+// console.log(employee);
+// console.log(employee.ID);
+// console.log(employee.Name);
 
-studentOne.Homecity="Mysore";//adding new property
-console.log(studentOne.Homecity);
-//array of object
-var team=[
-    {
-        Name:"Anirudha B S",
-        Gender:"Male",
-        ID:123456,
-        Dept:"I T",
-    },
-    {
-        Name:"vinay",
-        Gender:"Male",
-        ID:456123,
-        Dept:"I T",
-    },
-    {
-        Name:"Rahul",
-        Gender:"Male",
-        ID:561234,
-        Dept:"I T",
-    },
-    {
-        Name:"Sahana",
-        Gender:"Female",
-        ID:234561,
-        Dept:"I T",
-    }
-];
-// console.log(team[1]);
-// console.log(team[3]);
+// studentOne.Homecity="Mysore";//adding new property
+// console.log(studentOne.Homecity);
+// //array of object
+// var team=[
+//     {
+//         Name:"Anirudha B S",
+//         Gender:"Male",
+//         ID:123456,
+//         Dept:"I T",
+//     },
+//     {
+//         Name:"vinay",
+//         Gender:"Male",
+//         ID:456123,
+//         Dept:"I T",
+//     },
+//     {
+//         Name:"Rahul",
+//         Gender:"Male",
+//         ID:561234,
+//         Dept:"I T",
+//     },
+//     {
+//         Name:"Sahana",
+//         Gender:"Female",
+//         ID:234561,
+//         Dept:"I T",
+//     }
+// ];
+// // console.log(team[1]);
+// // console.log(team[3]);
 
-for(var i=0;i<team.length;i++){
-    console.log(team[i].ID + "  " + team[i].Name);//To print ppls name in the team.
-}
+// for(var i=0;i<team.length;i++){
+//     console.log(team[i].ID + "  " + team[i].Name);//To print ppls name in the team.
+// }
+
+
+//09-10-2022
+//let & Const---These two are the block scope.
+let x = 10; //let cannot be Redeclared.
+
+const PI = 3.141592653589793;//Const cannot be Redeclared, Reassigned.
+console.log(PI);
+//Const in Array
+const cars = ["Saab", "Volvo", "BMW"];
+console.log(cars);
+cars[0] = "Toyota";// You can change an element
+cars.push("Audi");// You can add an element
+console.log(cars);
+
+//Array Functions
+function add(a,b) {
+    return a+b
+}// Function Expression
+console.log(add(10,80));
+
+const sum =(a,b) => {return a + b}; //Arrow function.
+console.log(sum(500,6001));
+
+//Array Helpers
+//ForEach
+var arr=['one','two','three','four','five']
+arr.forEach(function (pri) {
+    console.log(pri);
+})
+
+const arr1 = [3, 5, 6, 1];
+let sum1 = 0;
+  arr1.forEach((item) => {sum1 += item;// adding the numbers in an array using arrow function.
+  });
+console.log(sum1)
+
+//map
+const num=[1,2,3,4,5,6,7,8,9]
+num.map((num)=> console.log(num*2))
+
+//Filter
+const arr2 = [3, 5, 6, 1];
+const req = arr2.filter((item) => {
+    return item > 4
+  });
+console.log(req);
+console.log(arr2);
+
+//reduce
+const arrr = [3, 5, 6, 1];
+const req2 = arrr.reduce((acc, curr) => {
+    acc *= curr;
+    return acc;
+  });
+console.log(req2);
+
+//find
+const array = [10, 20, 30, 40];
+const found = array.find((elem) => {
+  return elem > 20
+});
+console.log(found);
+
+//String literals
+var first='happy';
+var second='weekend';
+const message=`${first}  ${second}`
+console.log(message);
+
+
+
+
+
 
